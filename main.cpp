@@ -1,7 +1,7 @@
 #include <iostream>
 #include "ray.h"
 
-bool hit_sphere (const vec3& center, float radius, const ray& r) {
+float hit_sphere (const vec3& center, float radius, const ray& r) {
 	vec3 oc = r.origin() - center;
 	float a = dot(r.direction(), r.direction());
 	float b = 2.0 * dot(oc, r.direction());
